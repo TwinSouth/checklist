@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Mobile Checklist</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        max-width: 1000px;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+
+    .row {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+        padding: 6px;
+        width: 250px;
+        margin-right: 20px;
+    }
+
+    .checkbox-list {
+        margin-top: 20px;
+    }
+
+    .checkbox-item {
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .checkbox-item label {
+        font-weight: normal;
+        margin-left: 5px;
+    }
+
+    .notes-section {
+        margin-top: 40px;
+    }
+
+    textarea {
+        width: 750px;
+        height: 100px;
+        padding: 8px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        resize: vertical;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+
+    <div class="row">
+        <strong>Date:</strong>
+        <span id="currentDate"></span>
+    </div>
+
+    <div class="row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter Phone Number">
+    </div>
+
+</div>
+
+<div class="checkbox-list">
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb1">
+        <label for="cb1">
+            New Voice Line, AAL over Upgrade, Upgrade(s)
+        </label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb2">
+        <label for="cb2">
+            BTS - Watch(s), Tablets, Trackers, Kids Watch, Hotspots, Sync-Up Drive
+        </label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb3">
+        <label for="cb3">
+            HSI, Back-up HSI, AWAY HSI
+        </label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb4">
+        <label for="cb4">
+            P360 - Standard Protection, BYOD P360, MI P360 (BTS), HSI P360
+        </label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb5">
+        <label for="cb5">
+            Visa - 5% Rewards on TMO, 2% Rewards Elsewhere, No Annual Fee,
+            AutoPay Discount, $50 Off Next Bill
+        </label>
+    </div>
+
+    <div class="checkbox-item">
+        <input type="checkbox" id="cb6">
+        <label for="cb6">
+            Survey - T-Mobile Survey & Google Survey
+        </label>
+    </div>
+
+</div>
+
+<div class="notes-section">
+    <label for="notes">Additional Notes:</label><br>
+    <textarea id="notes" placeholder="Enter additional notes here"></textarea>
+</div>
+
+<script>
+    const now = new Date();
+
+    document.getElementById("currentDate").textContent =
+        now.toLocaleDateString() + " " +
+        now.toLocaleTimeString();
+</script>
+
+</body>
+</html>
